@@ -1,6 +1,37 @@
+
 @StudentAPI_HostAddress = http://localhost:5131
 
-GET {{StudentAPI_HostAddress}}/weatherforecast/
+### Get all students
+GET http://localhost:5131/api/students
 Accept: application/json
 
 ###
+
+### Get student by ID
+GET http://localhost:5131/api/students/1
+Accept: application/json
+
+###
+
+### Create student
+POST http://localhost:5131/api/students
+Content-Type: application/json
+
+{
+  "name": "Ruslan",
+  "surname": "Arabov",
+  "age": 20
+}
+
+###
+
+### Update student
+PUT http://localhost:5131/api/students/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Ruslan",
+  "surname": "Arabov",
+  "age": 21
+}
