@@ -58,7 +58,7 @@ public class StudentsController : ControllerBase
     {
         if (id != student.Id)
         {
-            return BadRequest("URL-dəki ID ilə tələbənin ID-si eyni olmalıdır.");
+            return BadRequest("URL-deki ID ile telebenin Idsi eyni olmalidir.");
         }
 
         var existingStudent = await _context.Students.FindAsync(id);
